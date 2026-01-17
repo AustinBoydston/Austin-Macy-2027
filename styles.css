@@ -2,14 +2,14 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #333;
-  background-color: #fffaf9;
+  color: #8550a0;
+  background-color: #29412a;
   scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
   font-family: 'Great Vibes', cursive;
-  color: #c48b9f;
+  color: #c16e78;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h2 {
 }
 
 .alt-bg {
-  background-color: #fff0f3;
+  background-color: #8d3143;
 }
 
 /* Hero Section */
@@ -35,7 +35,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #9161a9;
   text-align: center;
 }
 
@@ -97,7 +97,7 @@ footer {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #333;
+  background-color: #7f234a;
   padding: 0;
 }
 
@@ -121,4 +121,33 @@ footer {
 
 .navbar a:hover {
   background-color: #555;
+}
+
+
+/* Firefly overlay */
+/**body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; 
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+**/
+
+#fireflyCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* pointer-events: none ensures you can still click links/buttons 
+       underneath the glowing dots */
+    pointer-events: none; 
+    z-index: 9999; 
+}
+
+main {
+    position: relative;
+    text-align: center;
+    padding-top: 20vh;
 }
