@@ -1,0 +1,124 @@
+/* Font and basic style */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #fffaf9;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Great Vibes', cursive;
+  color: #c48b9f;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.section {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+.alt-bg {
+  background-color: #fff0f3;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('your-photo.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.couple-names {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.date, .location {
+  font-size: 1.2rem;
+}
+
+/* Details grid */
+.details-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+/* Buttons */
+.btn {
+  background-color: #c48b9f;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #a9687f;
+}
+
+/* Footer */
+footer {
+  background-color: #f8e8ec;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+  
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333;
+  padding: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
