@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ Couple Names }} Wedding</title>
+  <title> Austin & Macy </title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -12,13 +12,18 @@
   
   
   
-  
-  <header class="hero">
+  <header class="main-top">
+    <canvas id="fireflyCanvas"></canvas>
+    <script src="firefliesv3.js"></script>
     <div class="overlay"></div>
     <div class="hero-content">
       <h1 class="couple-names"> Austin   &   Macy</h1>
-      <p class="date"> 2027 </p>
+      <p class="date"> June 6th, 2027 </p>
       <p class="location">Lake City, CO</p>
+    </div>
+    <div class="countdown-container">
+    <p>Days Left: </p>
+    <h2 id="days-left">00</h2>
     </div>
   </header>
 
@@ -31,13 +36,20 @@
     <li><a href="accomodations.html">Accomodations</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="ourstory.html">Our Story</a></li>
+    <div id="countdown">
+  <div class="time-box"><span id="days">00</span><p>Days</p></div>
+  <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+  <div class="time-box"><span id="minutes">00</span><p>Mins</p></div>
+  <div class="time-box"><span id="seconds">00</span><p>Secs</p></div>
+  <script src="days_countdown2.js"></script>
+
+</div>
   </ul>
 </nav>
 
 
 
-<canvas id="fireflyCanvas"></canvas>
-<script src="fireflies.js"></script>
+
 
 
 
@@ -46,24 +58,29 @@
   <section id="our-story" class="section">
     <h2>Our Story</h2>
     <p>
-       Write your love story here. How you met, your adventures together, and how you got engaged. }}
+       Austin and Macy met September 26th 2023. A chance meeting at the OU cafeteria resulted in a first date, a second, and then many more. They explored a haunted school together, roadtripped the Talahina drive, then took a big chance and moved together to Durango Colorado. They both love the mountains they now live near and since moving have together explored many trails and amazing hikes the Rocky Mountains have to offer. Going on two years together and after many adventures in the southwest, On a secluded beach in southwest Oregon, Austin asked the question. Now a new chapter of Austin and Macy's lives is beggining in the heart of the San Juan Mountains. They cannot wait to celebrate their love with friends and family next summer at Lake City!  
     </p>
+    <img src="pro1.jpeg">
   </section>
+
+
+
+
 
   <section id="details" class="section alt-bg">
     <h2>Wedding Details</h2>
     <div class="details-grid">
       <div>
-        <h3>Ceremony</h3>
-        <p>{{ Ceremony time and venue details }}</p>
+        <h3>Meet and Greet</h3>
+        <p>The Penensula</p>
       </div>
       <div>
-        <h3>Reception</h3>
-        <p>{{ Reception time and venue details }}</p>
+        <h3>Ceremony</h3>
+        <p>The Tack Shed, Lake City CO</p>
       </div>
       <div>
         <h3>Dress Code</h3>
-        <p>{{ Optional dress code information }}</p>
+        <p>Business casual - Light formal</p>
       </div>
     </div>
   </section>
@@ -71,15 +88,21 @@
   <section id="rsvp" class="section">
     <h2>RSVP</h2>
     <p>
-      We can’t wait to celebrate with you! Please RSVP by {{ RSVP Date }}.
+      We can’t wait to celebrate with you! Please RSVP by January 1st 2027.
     </p>
-    <a href="{{ Your RSVP Link or Email }}" class="btn">RSVP Now</a>
-    <iframe src="YOUR_GOOGLE_FORM_LINK" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfzJjuqWJk3WGA8Sd2-HZ8cqaBlBZBvLHBfPXyAABR4WFvtQ/viewform?usp=publish-editor" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScfzJjuqWJk3WGA8Sd2-HZ8cqaBlBZBvLHBfPXyAABR4WFvtQ/viewform?usp=publish-editor" class="btn" target="_blank">RSVP Now</a>
 
   </section>
+  
 
   <footer>
-    <p>© {{ Year }} {{ Couple Names }} | Made with ❤️</p>
+    <p>2027 Austin & Macy</p>
   </footer>
+
+  <script src="days_countdown.js"></script>
+
+
 </body>
 </html>

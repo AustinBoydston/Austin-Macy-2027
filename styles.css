@@ -2,20 +2,44 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #8550a0;
+  font-size: 1.6rem;
+  color: #f4c9fe;
   background-color: #29412a;
+  
+  
   scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
-  font-family: 'Great Vibes', cursive;
-  color: #c16e78;
+
+body-main {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #8550a0;
+  background-color: linear-gradient(29412a50), #29412a50, url('A+M-206.jpg');
+  opacity: 0.5;
+  background-size: cover;
+  background-position: center;
+
+  scroll-behavior: smooth;
 }
 
+
+h1, h2, h3 {
+  font-family: 'Great Vibes', cursive;
+  color: #e4506e;
+}
+/*  
+e4506e
+c16e78
+*/
 h2 {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 2.2rem;
+  font-size: 2.9rem;
+}
+
+h3 {
+  font-size: 2.5rem;
 }
 
 .section {
@@ -23,21 +47,160 @@ h2 {
   text-align: center;
 }
 
+
+.larger-font{
+  font-size: 2.0rem; 
+}
+.very-large-font{
+  font-size: 7.0rem;
+}
 .alt-bg {
   background-color: #8d3143;
 }
 
-/* Hero Section */
-.hero {
+.alt-bg-purp{
+  background-color: #426843;
+}
+
+/* main top section on home screen */
+.main-top {
   position: relative;
   height: 100vh;
-  background: url('your-photo.jpg') center/cover no-repeat;
+  background: url('A+M-206.jpg');
+  background-position: 50% 40%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #9161a9;
   text-align: center;
 }
+
+
+/* Gallery grid */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+
+  /* Modal background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Modal content (big image) */
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #000;
+  }
+
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .close:hover {
+    color: #ff5555;
+  }
+
+
+
+
+
+
+#days-left {
+  font-size: 3rem;
+  color: #9161a9; /* Matching your previous purple theme */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-family: sans-serif;
+  color: #9161a9;
+}
+
+.time-box {
+  text-align: center;
+  background: #7f234a;
+;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 80px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.time-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.proposal-panel {
+  position: relative;
+  height:90vh;
+  background: url('pro1.jpeg');
+  background-position: 50% 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9161a9;
+  padding: 4rem 10%;
+  text-align: center;
+}
+
 
 .hero .overlay {
   position: absolute;
@@ -51,12 +214,14 @@ h2 {
 }
 
 .couple-names {
-  font-size: 4rem;
+  font-size: 7rem;
   margin: 0;
+  color: #e4506e;
 }
 
 .date, .location {
-  font-size: 1.2rem;
+  font-size: 2.3rem;
+  color: white;
 }
 
 /* Details grid */
@@ -124,15 +289,7 @@ footer {
 }
 
 
-/* Firefly overlay */
-/**body {
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a; 
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-**/
+
 
 #fireflyCanvas {
     position: fixed;
