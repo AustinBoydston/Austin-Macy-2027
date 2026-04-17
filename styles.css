@@ -76,6 +76,85 @@ h3 {
 }
 
 
+
+
+/* --- Lodging Section Styling --- */
+
+/* Ensures the grid handles the cards correctly */
+.details-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Individual UI Box (The Card) */
+.lodging-item {
+  background-color: #29412a; /* Your original dark green */
+  border: 1px solid #7f234a;  /* Your purple for the border */
+  border-radius: 12px;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  
+  /* This creates the smooth "growth" animation */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hover Effect: Grow and Highlight */
+.lodging-item:hover {
+  transform: translateY(-10px) scale(1.03); /* Moves up and grows slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  border-color: #e4506e; /* Highlights with your pink/red color */
+  background-color: #2e4a2f; /* Slightly lighter green on hover */
+}
+
+/* Card Content Styling */
+.lodging-item h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  color: #e4506e; /* Your pink/red header color */
+  line-height: 1.1;
+}
+
+.lodging-item p {
+  font-size: 1.1rem;
+  color: #f4c9fe; /* Your light purple text color */
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Specific styling for the button inside the card */
+.lodging-item .btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* --- Responsive adjustment for small screens --- */
+@media (max-width: 600px) {
+  .lodging-item {
+    width: 100%; /* Cards take full width on mobile */
+  }
+}
+
+
+
+
+
 /* Gallery grid */
   .gallery {
     display: grid;
@@ -307,4 +386,38 @@ main {
     position: relative;
     text-align: center;
     padding-top: 20vh;
+}
+
+
+/* --- Mobile Specific Tweaks --- */
+
+@media (max-width: 768px) {
+  /* Adjust the main section padding so boxes aren't too cramped */
+  .section {
+    padding: 2rem 5%;
+  }
+
+  .very-large-font {
+    font-size: 4rem; /* Shrink the massive headers so they don't wrap weirdly */
+  }
+
+  .details-grid {
+    gap: 15px; /* Tighter gap on mobile */
+  }
+
+  .lodging-item {
+    width: 90%; /* Make boxes fill most of the screen width */
+    max-width: none;
+    padding: 20px;
+    /* On mobile, we reduce the scale effect so it doesn't overlap other content */
+    transition: transform 0.2s ease; 
+  }
+
+  .lodging-item:active {
+    transform: scale(0.98); /* Provides "press" feedback when tapped on mobile */
+  }
+
+  .lodging-item h3 {
+    font-size: 1.8rem; /* Slightly smaller titles for mobile */
+  }
 }
