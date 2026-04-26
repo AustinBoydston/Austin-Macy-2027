@@ -75,7 +75,7 @@ h3 {
   text-align: center;
 }
 
-
+/*element to prevent google form snapping the page */
 
 
 /* --- Lodging Section Styling --- */
@@ -364,7 +364,7 @@ footer {
 }
 
 .navbar a:hover {
-  background-color: #555;
+  background-color: #c48b9f;
 }
 
 
