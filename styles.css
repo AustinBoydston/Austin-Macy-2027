@@ -335,14 +335,12 @@ footer {
   color: #555;
 }
   
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background-color: #7f234a;
-  padding: 0;
 }
 
 .navbar ul {
@@ -350,61 +348,61 @@ footer {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center; /* Centers icons vertically */
 }
 
-.navbar li {
-  margin: 0;
-}
+.navbar li { margin: 0; }
 
 .navbar a {
-  float: left;
-  display: block;
-  padding: 14px 16px;
   color: white;
   text-decoration: none;
   font-size: 17px;
+  padding: 14px 16px;
+  transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
-  background-color: #c48b9f;
-}
+.navbar a:hover { background-color: #c48b9f; }
 
-.navbar .icon{
-display: none;
-}
+/* Hide hamburger on desktop */
+.icon-container { display: none; }
 
 @media screen and (max-width: 770px) {
-  .navbar li:not(.icon-container) {
-    display: none;
-  }
-  .navbar a.icon {
-    float: right;
-    display: block;
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    background-color: #7f234a;
   }
 
-}
+  /* Hide all links by default on mobile */
+  .navbar li { display: none; }
 
-@media screen and (max-width: 770px) {
-/* This shows the links when you click the hamburger */
-  .navbar.responsive li {
-    display: block; /* Overrides the 'none' above */
-    width: 100%;    /* Makes links stack vertically */
-    text-align: left;
-  }  
-  
-  .navbar.responsive .icon-container {
+  /* Show hamburger button */
+  .icon-container {
+    display: block !important;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 15px;
+    top: 10px;
+    z-index: 10;
   }
 
-
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+  .navbar .icon { color: white; font-size: 24px; padding: 8px 12px; }
 }
+
+/* Show menu when responsive class is active */
+.navbar.responsive ul,
+.navbar.responsive li {
+  display: block !important;
+  width: 100%;
+}
+
+.navbar.responsive a {
+  text-align: left;
+  padding: 14px 25px;
+  border-bottom: 1px solid #6a1f3e;
+}
+
+/* Optional: close menu when clicking the icon again */
+.navbar.responsive .icon-container { top: -50px; }
 
 
 #fireflyCanvas {
