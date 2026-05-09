@@ -2,7 +2,7 @@ const canvas = document.getElementById('fireflyCanvas');
 const ctx = canvas.getContext('2d');
 
 let fireflies = [];
-const numFireflies = 70; // Slightly increased for a better "swarm" effect
+const numFireflies = 30; // Slightly increased for a better "swarm" effect
 let scrollY = 0;
 
 // Track Mouse Position

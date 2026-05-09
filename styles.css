@@ -380,8 +380,10 @@ footer {
   .icon-container {
     display: block !important;
     position: absolute;
-    right: 15px;
-    top: 10px;
+    font-size: 35px;
+    padding: 10px 16px;
+    right: 20px;
+    top: 5px;
     z-index: 10;
   }
 
