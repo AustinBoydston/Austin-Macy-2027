@@ -6,17 +6,23 @@
   <title>Austin & Macy</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
-<nav class="navbar">
+<body>
+<nav class="navbar" id="myTopNav">
   <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="registry.html">Registry</a></li>
     <li><a href="details.html">Details</a></li>
     <li><a href="directions.html">Directions</a></li>
     <li><a href="accomodations.html">Accomodations</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="ourstory.html">Our Story</a></li>
+    <li class="icon-container">
+      <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -30,3 +36,6 @@
 
     
   </section>
+
+  <script src="navbar-toggle.js"></script>
+</body>
