@@ -617,23 +617,9 @@ section#our-story img {
     font-size: clamp(1.5rem, 4vw, 3.25rem); 
     margin-bottom: 0.5rem;
   }
-
-  /* Prevent countdown from breaking across lines */
- /* .countdown-container p,
-  #days-left { 
-    display: inline-block; 
-    vertical-align: middle;
-  }
-}
-*/
-/* Also fix the stray </p> tag 
-#form-container { 
-  overflow-x: hidden; max-width: 100%; padding: 0 5px;
-}
-#form-container iframe { 
-  width: 100% !important; height: auto !important; min-height: 600px; border: none; display: block; margin: 0 auto;
 }
 
-#fireflyCanvas { 
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;
-} */
+
+.disclaimer-style {
+  font-size: clamp(.5rem, 1.0vw, 1.2rem);
+}
